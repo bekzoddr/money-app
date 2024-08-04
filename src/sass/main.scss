@@ -1,0 +1,32 @@
+@import "./components/navbar";
+@import "./components/create-investor-form";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    a {
+        text-decoration: none;
+    }
+
+    li,
+    ul {
+        list-style-type: none;
+    }
+
+    button {
+        border: none;
+        cursor: pointer;
+    }
+}
