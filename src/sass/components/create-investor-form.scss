@@ -1,199 +1,203 @@
-:root {
-    --background-color: #333;
-    --text-color: #fff;
-    --border-color: #555;
-    --button-bg-color: #0056b3;
-    --button-hover-bg-color: #007bff;
+// :root {
+//     --background-color: #333;
+//     --text-color: #fff;
+//     --border-color: #555;
+//     --button-bg-color: #0056b3;
+//     --button-hover-bg-color: #007bff;
+// }
+
+// .formm {
+//     margin-block: 50px;
+// }
+
+// .cancel {
+//     position: absolute;
+//     right: 0;
+//     top: -15px !important;
+//     width: 35px;
+//     height: 35px;
+//     border-radius: 0 10px 0 0;
+//     background-color: red;
+//     display: grid;
+//     place-items: center;
+//     color: #fff;
+// }
+
+// .investor-form {
+//     display: grid;
+//     gap: 1rem;
+//     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+//     max-width: 500px;
+//     max-height: 500px;
+//     overflow-y: auto;
+//     margin: 0 auto;
+//     padding: 2rem;
+//     border: 1px solid var(--border-color);
+//     border-radius: 8px;
+//     background-color: var(--background-color);
+//     color: var(--text-color);
+// }
+
+// .investor-form label {
+//     margin-bottom: 1rem;
+//     font-size: 1rem;
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .investor-form label input {
+//     padding: 0.5rem;
+//     border: 1px solid var(--border-color);
+//     border-radius: 4px;
+//     font-size: 1rem;
+//     background-color: var(--background-color);
+//     color: var(--text-color);
+// }
+
+// .investor-form button {
+//     padding: 0.75rem;
+//     border: none;
+//     border-radius: 4px;
+//     background-color: var(--button-bg-color);
+//     color: white;
+//     font-size: 1rem;
+//     cursor: pointer;
+// }
+
+// .investor-form button:hover {
+//     background-color: var(--button-hover-bg-color);
+// }
+
+// @media (min-width: 769px) {
+//     .investor-form {
+//         flex-wrap: wrap;
+//     }
+
+//     .investor-form label {
+//         flex: 1 1 48%;
+//         margin: 1%;
+//     }
+
+//     .investor-form button {
+//         flex: 1 1 100%;
+//         margin-top: 1rem;
+//     }
+// }
+
+// @media (max-width: 768px) {
+//     .investor-form {
+//         padding: 0.5rem;
+//     }
+
+//     .investor-form label {
+//         font-size: 0.9rem;
+//     }
+
+//     .investor-form label input {
+//         font-size: 0.9rem;
+//     }
+
+//     .investor-form button {
+//         padding: 0.5rem;
+//         font-size: 0.9rem;
+//     }
+// }
+
+// @media (max-width: 480px) {
+//     .investor-form {
+//         padding: 0.25rem;
+//     }
+
+//     .investor-form label {
+//         font-size: 0.8rem;
+//     }
+
+//     .investor-form label input {
+//         font-size: 0.8rem;
+//     }
+
+//     .investor-form button {
+//         padding: 0.25rem;
+//         font-size: 0.8rem;
+//     }
+// }
+
+// .modal-overlay {
+//     position: fixed;
+//     inset: 0;
+//     background: rgba(0, 0, 0, 0.8);
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     z-index: 1000;
+// }
+
+// .modal-content {
+//     background: var(--background-color);
+//     padding: 2rem;
+//     border-radius: 8px;
+//     position: fixed;
+//     width: 100%;
+//     z-index: 1000;
+//     bottom: 5px;
+// }
+
+// .modal-content button {
+//     margin-top: 1rem;
+// }
+
+// .add {
+//     display: flex;
+//     justify-content: center;
+//     margin-top: 20px;
+// }
+
+// .add-button {
+//     position: sticky;
+//     background-color: var(--button-bg-color);
+//     border: none;
+//     border-radius: 50%;
+//     color: white;
+//     font-size: 24px;
+//     width: 50px;
+//     height: 50px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// .add-button:hover {
+//     background-color: var(--button-hover-bg-color);
+// }
+
+
+// .add-button {
+//     position: fixed;
+//     bottom: 60px;
+//     right: 20px;
+//     opacity: 0;
+//     transition: .5s all ease;
+// }
+
+// .add-button.visible {
+//     transition: .5s all ease;
+//     opacity: 1;
+// }
+
+// .add-button.hidden {
+//     display: none;
+// }
+
+body {
+    overflow-x: hidden;
 }
-
-.formm {
-    margin-block: 50px;
-}
-
-.cancel {
-    position: absolute;
-    right: 0;
-    top: -15px !important;
-    width: 35px;
-    height: 35px;
-    border-radius: 0 10px 0 0;
-    background-color: red;
-    display: grid;
-    place-items: center;
-    color: #fff;
-}
-
-.investor-form {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    max-width: 500px;
-    max-height: 500px;
-    overflow-y: auto;
-    margin: 0 auto;
-    padding: 2rem;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-.investor-form label {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.investor-form label input {
-    padding: 0.5rem;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    font-size: 1rem;
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-.investor-form button {
-    padding: 0.75rem;
-    border: none;
-    border-radius: 4px;
-    background-color: var(--button-bg-color);
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.investor-form button:hover {
-    background-color: var(--button-hover-bg-color);
-}
-
-@media (min-width: 769px) {
-    .investor-form {
-        flex-wrap: wrap;
-    }
-
-    .investor-form label {
-        flex: 1 1 48%;
-        margin: 1%;
-    }
-
-    .investor-form button {
-        flex: 1 1 100%;
-        margin-top: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .investor-form {
-        padding: 0.5rem;
-    }
-
-    .investor-form label {
-        font-size: 0.9rem;
-    }
-
-    .investor-form label input {
-        font-size: 0.9rem;
-    }
-
-    .investor-form button {
-        padding: 0.5rem;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .investor-form {
-        padding: 0.25rem;
-    }
-
-    .investor-form label {
-        font-size: 0.8rem;
-    }
-
-    .investor-form label input {
-        font-size: 0.8rem;
-    }
-
-    .investor-form button {
-        padding: 0.25rem;
-        font-size: 0.8rem;
-    }
-}
-
-.modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.modal-content {
-    background: var(--background-color);
-    padding: 2rem;
-    border-radius: 8px;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    bottom: 5px;
-}
-
-.modal-content button {
-    margin-top: 1rem;
-}
-
-.add {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.add-button {
-    position: sticky;
-    background-color: var(--button-bg-color);
-    border: none;
-    border-radius: 50%;
-    color: white;
-    font-size: 24px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.add-button:hover {
-    background-color: var(--button-hover-bg-color);
-}
-
-
-.add-button {
-    position: fixed;
-    bottom: 60px;
-    right: 20px;
-    opacity: 0;
-    transition: .5s all ease;
-}
-
-.add-button.visible {
-    transition: .5s all ease;
-    opacity: 1;
-}
-
-.add-button.hidden {
-    display: none;
-}
-
 
 .investor__data {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px !important;
-    justify-items: center;
+    // display: grid;
+    // gap: 10px;
+    // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
 }
 
 .data-item {
@@ -203,7 +207,7 @@
     padding: 20px;
     margin: 10px 0;
     max-width: 1000px;
-    width: 100%;
+    width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #000000b2;
     transition: transform 0.2s;

@@ -1,17 +1,27 @@
 import React, { useState, useEffect } from "react";
-import Form from "../../components/investors_form/Create-Investor-Form";
+import InvestorForm from "../../components/investors_form/InvestorForm";
+import ClientForm from "../../components/clients_form/ClientForm";
 import Investors from "../../components/investors/Investors";
 
 const Home = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const [showButton, setShowButton] = useState(false);
+  const [formType, setFormType] = useState(null);
+  const [showRoundButtons, setShowRoundButtons] = useState(false);
 
-  const openModal = () => {
-    setIsOpen(true);
+  const openForm = (type) => {
+    setFormType(type);
+    setIsFormOpen(true);
+    setShowRoundButtons(false);
   };
 
-  const closeModal = () => {
-    setIsOpen(false);
+  const closeForm = () => {
+    setIsFormOpen(false);
+    setFormType(null);
+  };
+
+  const toggleRoundButtons = () => {
+    setShowRoundButtons(!showRoundButtons);
   };
 
   const handleScroll = () => {
@@ -31,15 +41,28 @@ const Home = () => {
 
   return (
     <div>
-      <Form isOpen={isOpen} closeModal={closeModal} />
+      {formType === "investor" && (
+        <InvestorForm isOpen={isFormOpen} closeModal={closeForm} />
+      )}
+      {formType === "client" && (
+        <ClientForm isOpen={isFormOpen} closeModal={closeForm} />
+      )}
+      <Investors />
       <div className="add">
-        <Investors />
         <button
-          className={`add-button ${showButton ? "visible" : "hidden"}`}
-          onClick={openModal}
+          className={`add-button ${showRoundButtons ? "open" : ""}`}
+          onClick={toggleRoundButtons}
         >
-          +
+          {!showRoundButtons && "+"}
         </button>
+        <div className={`round-buttons ${showRoundButtons ? "visible" : ""}`}>
+          <button className="round-button" onClick={() => openForm("investor")}>
+            Create Investor
+          </button>
+          <button className="round-button" onClick={() => openForm("client")}>
+            Create Client
+          </button>
+        </div>
       </div>
       <br />
       <br />

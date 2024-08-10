@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ImCancelCircle } from "react-icons/im";
-const Form = ({ isOpen, closeModal }) => {
+
+const ClientForm = ({ isOpen, closeModal }) => {
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
@@ -24,20 +25,21 @@ const Form = ({ isOpen, closeModal }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    console.log("Client Data:", formData);
   };
 
   return (
     <>
       {isOpen && (
-        <div clImCancelCircleck={closeModal}>
+        <div className="modal" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button type="button" className="cancel" onClick={closeModal}>
               <ImCancelCircle size={25} />
             </button>
-            <form className="investor-form" onSubmit={handleSubmit}>
+            <form className="form" onSubmit={handleSubmit}>
+              <h2>Create Client</h2>
               <label>
-                Investor Name:
+                Name:
                 <input
                   type="text"
                   name="name"
@@ -46,7 +48,7 @@ const Form = ({ isOpen, closeModal }) => {
                 />
               </label>
               <label>
-                Investor Surname:
+                Surname:
                 <input
                   type="text"
                   name="surname"
@@ -55,7 +57,7 @@ const Form = ({ isOpen, closeModal }) => {
                 />
               </label>
               <label>
-                Investor Passport ID:
+                Passport ID:
                 <input
                   type="text"
                   name="passportId"
@@ -64,7 +66,7 @@ const Form = ({ isOpen, closeModal }) => {
                 />
               </label>
               <label>
-                Investor Passport Number:
+                Passport Number:
                 <input
                   type="text"
                   name="passportNumber"
@@ -73,7 +75,7 @@ const Form = ({ isOpen, closeModal }) => {
                 />
               </label>
               <label>
-                Investor Balance:
+                Balance:
                 <input
                   type="number"
                   name="balance"
@@ -82,7 +84,7 @@ const Form = ({ isOpen, closeModal }) => {
                 />
               </label>
               <label>
-                Investor Income:
+                Income:
                 <input
                   type="number"
                   name="income"
@@ -91,7 +93,7 @@ const Form = ({ isOpen, closeModal }) => {
                 />
               </label>
               <label>
-                Investor Expense:
+                Expense:
                 <input
                   type="number"
                   name="expense"
@@ -100,7 +102,7 @@ const Form = ({ isOpen, closeModal }) => {
                 />
               </label>
               <label>
-                Investor Profit:
+                Profit:
                 <input
                   type="number"
                   name="profit"
@@ -109,7 +111,7 @@ const Form = ({ isOpen, closeModal }) => {
                 />
               </label>
               <label>
-                Investor Status:
+                Status:
                 <input
                   type="text"
                   name="status"
@@ -118,7 +120,7 @@ const Form = ({ isOpen, closeModal }) => {
                 />
               </label>
               <label>
-                Investor Email:
+                Email:
                 <input
                   type="email"
                   name="email"
@@ -135,4 +137,4 @@ const Form = ({ isOpen, closeModal }) => {
   );
 };
 
-export default Form;
+export default ClientForm;
