@@ -47,7 +47,7 @@ const Home = () => {
       {formType === "client" && (
         <ClientForm isOpen={isFormOpen} closeModal={closeForm} />
       )}
-      <Investors />
+      {/* <Investors /> */}
       <div className="add">
         <button
           className={`add-button ${showRoundButtons ? "open" : ""}`}

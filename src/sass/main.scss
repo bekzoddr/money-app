@@ -114,19 +114,22 @@ body {
         border: none;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
-        cursor: pointer;
 
         &.open {
             background-color: #196bdd;
             transform: rotate(45deg);
+            transition: .5s ease-in;
+
 
             &:before {
                 content: "×";
+                transition: .5s ease-in;
                 font-size: 28px;
             }
         }
 
         &:hover {
+            transition: .5s ease-in;
             background-color: #196bdd;
             transform: scale(1.1);
         }
